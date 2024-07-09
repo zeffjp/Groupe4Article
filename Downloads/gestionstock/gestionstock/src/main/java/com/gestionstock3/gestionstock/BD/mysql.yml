@@ -1,0 +1,13 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:latest
+    volumes:
+      - mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: passer
+      MYSQL_DATABASE: gestion_stock
+
+volumes:
+  mysql_data:
+    driver: local
